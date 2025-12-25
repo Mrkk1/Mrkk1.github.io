@@ -13,7 +13,7 @@ export const metadata = {
 }
 
 export default async function Home() {
-  const isMobile = await isMobileDevice()
+  const isMobile = false
 
   return (
     <main className="flex flex-col items-center justify-center px-4 overflow-x-hidden">

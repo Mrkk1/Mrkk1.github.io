@@ -1,15 +1,54 @@
-## Portfolio Project
-Welcome to my portfolio project! This repository features my personal portfolio website, inspired by [ByteGrad](https://www.youtube.com/watch?v=sUKptmUVIBM&t=21888s).
+# Portfolio Website | Mrkk1
 
-<img width="804" alt="image" src="https://github.com/Codefreyy/joy-personal-portfolio/assets/104683968/92cae13b-3e5f-4874-afdb-c432b1a410f0">
+Welcome to my personal portfolio! This website showcases my projects, skills, and professional experience as a Full Stack Engineer.
 
+## 🚀 Live Demo
 
+[https://mrkk1.github.io](https://mrkk1.github.io)
 
-## What I Did
-- Bug Fixes: Fixed the scrolling bug from the original project.
-- Updated Projects Section: Revamped the "Intro" and "Projects" sections.
-- UX Enhancements: Added sound effects, animations, and arrow indicators for a more engaging experience.
-- Multilingual Support: Added multiple language options using i18nNext.
+## 🛠 Tech Stack
 
-## Contributions
-Contributions are welcome! Fork the repository and submit a pull request.
+- **Framework**: [Next.js](https://nextjs.org/) (App Router)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Animation**: [Framer Motion](https://www.framer.com/motion/)
+- **Internationalization**: [next-intl](https://next-intl-docs.vercel.app/)
+- **Icons**: [React Icons](https://react-icons.github.io/react-icons/)
+- **Email**: [Resend](https://resend.com/)
+- **Deployment**: GitHub Pages (Static Export)
+
+## ✨ Features
+
+- **Responsive Design**: Fully responsive layout that works on all devices.
+- **Dark/Light Mode**: Seamless theme switching with persistent state.
+- **Internationalization**: Support for both English and Chinese (En/Zh).
+- **Interactive UI**: Smooth animations and transitions.
+- **Project Showcase**: Detailed view of my recent works like viviDraft, viaimCode, and more.
+
+## 📦 Local Development
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Mrkk1/Mrkk1.github.io.git
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Run the development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. **Open in browser**
+   Open [http://localhost:3000](http://localhost:3000) to view the site.
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).

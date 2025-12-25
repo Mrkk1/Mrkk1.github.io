@@ -8,7 +8,7 @@ import ThemeSwitch from "@/components/ThemeTwich"
 // import { usePathname } from "next/navigation"
 import LanguageSwitch from "@/components/LanguageSwitch"
 import { NextIntlClientProvider } from "next-intl"
-import { getMessages } from "next-intl/server"
+import { getMessages, setRequestLocale } from "next-intl/server"
 import WidgetWrapper from "@/components/WidgetWrapper"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -25,6 +25,7 @@ export default async function RootLayout({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
+  setRequestLocale(locale);
   const messages = await getMessages()
   // const pathname = usePathname()
   // const isProjectDetail = pathname.includes("projects")

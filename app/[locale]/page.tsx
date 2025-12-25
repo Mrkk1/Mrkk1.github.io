@@ -12,7 +12,16 @@ export const metadata = {
   description: "Mrkk1 is a full-stack developer with 4 years of experience.",
 }
 
-export default async function Home() {
+import { setRequestLocale } from 'next-intl/server';
+
+export default async function Home({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  
   const isMobile = false
 
   return (

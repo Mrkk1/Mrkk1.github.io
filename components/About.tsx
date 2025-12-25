@@ -23,111 +23,51 @@ export default function About() {
     >
       <SectionHeading>{sectionLan("about")}</SectionHeading>
       {activeLocale == "zh" ? (
-        // <p>{t("desc")}</p> //这样一段话没法分段
-        <div className="flex flex-col gap-2">
-          <div>我是一个热爱学习、思考且富有韧性的人。</div>
+        <div className="flex flex-col gap-4 text-lg">
           <div>
-            从2019年到2023年，我在美丽的珞珈山武汉大学度过了四个春夏秋冬。在这段时间里，我开启了前端开发的大门，并在学校的大数据研究院和蔚来公司分别实习了半年。作为一名转码选手，我遇到了许多困难，也曾有过自我怀疑的时刻。但回顾过去，我发现是对自我提升的热爱以及与团队共同奋斗的激情支撑着我坚持下来。
+            👋 嗨！很高兴在这里遇见你。
           </div>
           <div>
-            本科毕业后，我来到了苏格兰的海边小镇，在圣安德鲁斯大学度过了一段难忘的时光。在这里，我养成了规律运动和健康饮食的好习惯，并结识了许多志同道合的朋友。我甚至在当地的意大利餐馆当厨师，并在一家酒店担任早餐服务员，丰富了我的人生体验。
+            我是一名崇尚 <span className="font-bold">Vibe Coding</span> 的全栈与 AI 开发工程师。对我而言，代码从来不仅是冰冷的字符堆砌，它更像是一种富有生命力的语言，用来编织流畅、自然且充满惊喜的数字体验。作为 <span className="font-bold">uniai 开源核心贡献者</span>，我热衷于在技术的边界上不断探索，寻找那些能让应用“活”起来的瞬间。
           </div>
           <div>
-            适应异国他乡的生活并非易事，但这段经历让我学会了从逆境、冲突、失败甚至积极事件中快速恢复的能力。我坚信，坚韧、专注和自信是我最重要的品质之一。
+            我的 AI 之旅始于 <span className="font-bold">中科苏州智能计算技术研究院</span>。在那里，我有幸第一次深度接触人工智能，并开启了我的职业新时代。值得一提的是，在 <span className="font-bold">Dify</span> 项目初期，我就与他们的团队进行了深入交流，这段经历极大地拓宽了我的视野。
           </div>
-
           <div>
-            目前，我在准备2025年秋招。同时在自己的 小红书 、
-            <a
-              className="underline"
-              href="https://blog-joy-peng.netlify.app/"
-              target="_blank"
-            >
-              个人博客
-            </a>
-            和 b站 记录技术和生活。
+            目前，我在 <span className="font-bold">讯飞未来</span> 专注于 AI 领域的探索与开发。我非常享受从 0 到 1 将一个模糊的想法打磨成现实的过程——无论是搭建高效的企业级博客，还是构建复杂的 Agent 工作流与知识库系统，每当看着项目从无到有、从构想到落地，那份成就感总是让我乐此不疲。
+          </div>
+          <div>
+            在技术栈上，我像个贪心的探险家。我精通 <span className="font-bold">Vue, React, Node.js</span>，也深耕 <span className="font-bold">Electron</span> 与 <span className="font-bold">Uniapp</span> 跨平台开发。同时，我对 AI 的热爱让我深入 <span className="font-bold">Python</span> 后端，钻研 <span className="font-bold">Transformer 架构</span> 与 <span className="font-bold">Whisper</span> 等 ASR 模型。
+          </div>
+          <div>
+             生活中的我，同样保持着对世界的好奇。我现在的重心正全力投入在 <span className="font-bold">AI Agent 开发</span>、<span className="font-bold">AIGC 内容生成</span> 以及探索 <span className="font-bold">Spec Coding</span> 架构的新范式上。对我来说，保持对新技术的敏锐与热情，就是保持对未来的无限期待。
           </div>
         </div>
       ) : (
-        <>
-          <p className="mb-3">
-            My journey into programming kicked off during my undergrad in
-            <span className="font-medium italic">
-              {" "}
-              Digital Publishing
-            </span> at {}
-            <span className="italic underline">
-              <a
-                href="https://en.wikipedia.org/wiki/Wuhan_University"
-                target="_blank"
-              >
-                Wuhan University.
-              </a>
-            </span>{" "}
-            As a freshman, I got my feet wet with the basics of computer
-            science, databases, and Python. But what truly sparked my passion
-            was a course on semantic publishing—there, I used HTML and CSS to
-            create a webpage dedicated to my favorite figure skater,{" "}
-            <a
-              href="https://en.wikipedia.org/wiki/Yuzuru_Hanyu"
-              target="_blank"
-              className="italic underline"
-            >
-              Yuzuru Hanyu.{" "}
-            </a>
-            This experience opened my eyes to the charm of web development———
-            <span className="font-medium italic">
-              literally, you can build anything you envision with code.
-            </span>
+        <div className="flex flex-col gap-4 text-lg">
+          <p>
+            👋 Hi there! Glad to meet you here.
           </p>
-
-          <p className="mb-3">
-            I sharpened my front-end development skills through internships at
-            Internships at Wuhan University&apos;s Big Data Institute and later
-            at{" "}
-            <span className="italic underline">
-              <a href="https://www.nio.com/careers" target="_blank">
-                {" "}
-                NIO Inc.
-              </a>
-            </span>{" "}
-            Working closely with developers, designers, testers, and product
-            managers, I loved the buzz of a team pulling together to make our
-            product better. And there’s nothing quite like the thrill of seeing
-            my own code being used by thousands—it’s what solidified my decision
-            to pursue a career in front-end development.
-          </p>
-
-          <p className="mb-3">
-            I’m now doing my Masters in
-            <span className="font-medium italic"> Computing and IT</span> at the{" "}
-            <span className="italic underline">
-              <a href="https://www.st-andrews.ac.uk/" target="_blank">
-                University of St Andrews.{" "}
-              </a>
-            </span>
-            I thrive on programming challenges and enjoy working with teams to
-            solve complex problems. I specialize in technologies such as
-            <span className="font-medium italic"> React, Next.js and Vue</span>,
-            and have a solid understanding of{" "}
-            <span className="font-medium italic">
-              JavaScript, TypeScript and HTML/CSS
-            </span>
-            .{" "}
+          <p>
+            I am a Full Stack & AI Engineer who embraces the <span className="font-bold italic">Vibe Coding</span> philosophy. To me, code is never just cold character strings; it's a vibrant language used to weave fluid, natural, and surprising digital experiences. As a <span className="font-bold">core contributor to uniai</span>, I am passionate about exploring the boundaries of technology, always looking for those moments that make an application come "alive."
           </p>
 
           <p>
-            In my spare time, I enjoy exploring new technologies and building
-            interesting projects. I also run my social media accounts on
-            platforms like Bilibili and Xiaohongshu, where I share tech tips and
-            tricks. And when I’m not at the computer, you’ll find me
-            <span className="font-medium italic">
-              {" "}
-              cooking up a storm, catching a movie, or keeping fit with regular
-              workouts.
-            </span>
+            My journey into AI began at the <span className="font-bold">Suzhou Institute of Intelligent Computing Technology, CAS</span>. It was there that I first delved into artificial intelligence, marking a new era in my career. Notably, I had the opportunity to engage with the <span className="font-bold">Dify</span> team during their early stages, an experience that significantly broadened my horizons.
           </p>
-        </>
+
+          <p>
+            Currently, I am at <span className="font-bold">iFLYTEK Future</span>, focusing on AI exploration and development. I thoroughly enjoy the process of polishing a vague idea into reality from scratch—whether it's building an efficient enterprise blog or constructing complex Agent workflows and knowledge base systems. Watching a project grow from zero to one, from concept to launch, always brings me a sense of accomplishment that I never get tired of.
+          </p>
+
+          <p>
+             In terms of tech stack, I'm like a greedy explorer. I am proficient in <span className="font-bold">Vue, React, and Node.js</span>, and I have deep expertise in <span className="font-bold">Electron</span> and <span className="font-bold">Uniapp</span> for cross-platform development. At the same time, my passion for AI leads me deep into <span className="font-bold">Python</span> backend, studying <span className="font-bold">Transformer architecture</span> and <span className="font-bold">ASR models like Whisper</span>.
+          </p>
+
+          <p>
+            In my daily life, I maintain the same curiosity about the world. My current focus is fully dedicated to <span className="font-bold">AI Agent development</span>, <span className="font-bold">AIGC content generation</span>, and exploring the new paradigms of <span className="font-bold">Spec Coding</span> architecture. For me, staying keen and enthusiastic about new technologies is about keeping infinite expectations for the future.
+          </p>
+        </div>
       )}
     </motion.section>
   )

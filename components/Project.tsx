@@ -43,22 +43,27 @@ export default function Project({
         <div className="group pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col items-start gap-3 h-full sm:group-even:ml-[18rem]">
           <div className="flex flex-col gap-3 items-start ">
             <h3 className="text-2xl font-semibold group-hover:text-pink dark:group-hover:text-yellow hover:underline">
-              <Link href={demoUrl} target="_blank">
-                {activeLocale === "zh" ? title_zh : title}
-              </Link>
+              {demoUrl ? (
+                <Link href={demoUrl} target="_blank">
+                  {activeLocale === "zh" ? title_zh : title}
+                </Link>
+              ) : (
+                <span>{activeLocale === "zh" ? title_zh : title}</span>
+              )}
             </h3>
 
             <div className="flex gap-3 text-sm text-gray-500 dark:text-gray-300">
-              {" "}
-              <Link
-                href={projectUrl}
-                target="_blank"
-                className="w-full flex items-center gap-1  hover:underline underline-offset-2"
-              >
-                <span className="break-keep">Code</span>
+              {projectUrl && (
+                <Link
+                  href={projectUrl}
+                  target="_blank"
+                  className="w-full flex items-center gap-1  hover:underline underline-offset-2"
+                >
+                  <span className="break-keep">Code</span>
 
-                <FaGithubSquare className="w-5 h-5" />
-              </Link>
+                  <FaGithubSquare className="w-5 h-5" />
+                </Link>
+              )}
               {demoUrl && (
                 <Link
                   href={demoUrl}

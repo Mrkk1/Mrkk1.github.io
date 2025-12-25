@@ -7,19 +7,25 @@ import Footer from "@/components/Footer"
 import ThemeSwitch from "@/components/ThemeTwich"
 // import { usePathname } from "next/navigation"
 import LanguageSwitch from "@/components/LanguageSwitch"
-import { NextIntlClientProvider, useMessages } from "next-intl"
+import { NextIntlClientProvider } from "next-intl"
+import { getMessages } from "next-intl/server"
 import WidgetWrapper from "@/components/WidgetWrapper"
 
 const inter = Inter({ subsets: ["latin"] })
 
-export default function RootLayout({
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'zh' }];
+}
+
+export default async function RootLayout({
   children,
-  params: { locale },
+  params,
 }: {
   children: React.ReactNode
-  params: { locale: string }
+  params: Promise<{ locale: string }>
 }) {
-  const messages = useMessages()
+  const { locale } = await params
+  const messages = await getMessages()
   // const pathname = usePathname()
   // const isProjectDetail = pathname.includes("projects")
   return (

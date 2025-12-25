@@ -22,14 +22,22 @@ const ThemeContextProvider = ({ children }: ThemeContextProviderProp) => {
   const toggleTheme = () => {
     if (theme === "light") {
       setTheme("dark")
-      playDark()
       window.localStorage.setItem("theme", "dark")
       document.documentElement.classList.add("dark")
+      try {
+        playDark()
+      } catch (e) {
+        console.error("Error playing dark sound:", e)
+      }
     } else {
       setTheme("light")
-      playLight()
       window.localStorage.setItem("theme", "light")
       document.documentElement.classList.remove("dark")
+      try {
+        playLight()
+      } catch (e) {
+        console.error("Error playing light sound:", e)
+      }
     }
   }
 
@@ -39,14 +47,12 @@ const ThemeContextProvider = ({ children }: ThemeContextProviderProp) => {
       setTheme(localTheme)
       if (localTheme === "dark") {
         document.documentElement.classList.add("dark")
-      } else {
-        document.documentElement.classList.remove("dark")
       }
     } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       setTheme("dark")
       document.documentElement.classList.add("dark")
     }
-  }, [theme])
+  }, [])
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>

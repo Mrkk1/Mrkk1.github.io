@@ -110,7 +110,11 @@ export const projectsData = [
             {
                 "title": "viviDraft 演示",
                 "url": "https://blog-vi.oss-cn-shanghai.aliyuncs.com/A.mp4"
-            }
+            },
+            {
+                "title": "viviDraft 历史记录",
+                "url": "https://blog-vi.oss-cn-shanghai.aliyuncs.com/Area2.mp4"
+            },
         ]
     },
     {

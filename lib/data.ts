@@ -1,11 +1,13 @@
 import React from "react";
 import { FaReact, FaNodeJs, FaVuejs } from "react-icons/fa";
+import { AiOutlineAlibaba } from "react-icons/ai";
 import { LuGraduationCap } from "react-icons/lu";
 import viaimCodeImage from '@/public/viaimCode.png';
 import lechatImage from "@/public/lechat.png";
 import remeImage from "@/public/reme.png";
 import zjytImage from "@/public/zjyt.png";
 import vividraftImage from '@/public/vividraft.png';
+import viaimNoteImage from '@/public/screenshot-20260228-142410.png';
 
 export const links = [
     {
@@ -41,12 +43,20 @@ export const headerLanguageMap = {
 
 export const experiencesData = [
     {
+        title: "Frontend Developer",
+        location: "Alibaba Tmall & Taobao Group",
+        description:
+            "Joined Tmall & Taobao (TaoTian) Group, focusing on the R&D of AI-enhanced e-commerce platforms. Responsible for building intelligent systems driven by AI Agents, exploring the implementation of LLMs in large-scale e-commerce scenarios to improve user experience and business efficiency.",
+        icon: React.createElement(AiOutlineAlibaba),
+        date: "2026.03 - Present",
+    },
+    {
         title: "Full Stack Engineer",
         location: "iFLYTEK Future",
         description:
             "Deeply involved in AI meeting headphone algorithm team. Built internal tool platforms, TTS/Mouth Replacement capabilities demo, and enterprise technical blog. Responsible for AI end-side model demos, internal Agent workflow platform, and RAG knowledge base projects.",
         icon: React.createElement(FaNodeJs),
-        date: "2024.03 - Present",
+        date: "2024.03 - 2026.02",
     },
     {
         title: "Full Stack Developer",
@@ -60,11 +70,18 @@ export const experiencesData = [
 
 export const experiencesDataZn = [
     {
+        "title": "前端开发工程师",
+        "location": "阿里巴巴 淘天集团",
+        "description": "入职淘天集团（淘宝 & 天猫），专注于 AI 增强型电商平台的研发。负责构建 AI Agent 驱动的智能导购与内容生成系统，探索大模型在超大规模电商场景下的应用落地，致力于通过 AI 技术提升用户交互体验与业务效能。",
+        "icon": React.createElement(AiOutlineAlibaba),
+        "date": "2026年3月 - 至今"
+    },
+    {
         "title": "全栈开发工程师",
         "location": "科大讯飞耳机事业群",
         "description": "效力于AI会议耳机算法团队。负责搭建内部工具平台、算法能力展示、TTS与嘴替功能转化。开发企业技术博客、AI端侧模型Demo，以及内部Agent工作流平台和RAG知识库项目。",
         icon: React.createElement(FaNodeJs),
-        "date": "2024年3月 - 至今"
+        "date": "2024年3月 - 2026年2月"
     },
     {
         "title": "全栈开发工程师",
@@ -79,6 +96,7 @@ export const experiencesDataZn = [
 export type ProjectTags = typeof projectsData[number]["tags"];
 
 export const projectsData = [
+  
     {
         "title": "viviDraft",
         "title_zh": "viviDraft",
@@ -88,6 +106,16 @@ export const projectsData = [
         "imageUrl": vividraftImage,
         "projectUrl": "",
         "demoUrl": "https://vividraft.weilai.ai/zh"
+    },
+    {
+        "title": "viaimNote",
+        "title_zh": "viaimNote",
+        "description": "An AI-powered note-taking and content creation platform consisting of a Web app and a browser extension. Integrated management for spaces, files, and creations, utilizing AI for tasks like summarization, mind maps, and deep research.",
+        "desc_zh": "一个面向知识整理与内容创作的 AI 笔记项目，包含 Web 应用与浏览器扩展两部分。Web 端提供“空间/文件/创作”一体化管理，结合 AI 能力完成摘要、待办、思维导图、标题、概览、深度研究、播客等生成任务；扩展用于网页内容采集与快速总结。",
+        "tags": ["Next.js", "React", "TypeScript", "Supabase", "TailwindCSS", "Chrome Extension", "AI Agent"],
+        "imageUrl": viaimNoteImage,
+        "projectUrl": "",
+        "demoUrl": "https://viaimnote.weilai.ai/"
     },
     {
         "title": "viaimCode",
@@ -147,6 +175,8 @@ export const skillsData = [
     "Git",
     "Tailwind",
     "Prisma",
+    "Supabase",
+    "Chrome Extension",
     "Three.js",
     "Transformer",
     "Whisper",

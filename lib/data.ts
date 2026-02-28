@@ -105,7 +105,13 @@ export const projectsData = [
         "tags": ["Chrome Extension", "React", "Next.js", "Supabase", "Stripe", "TailwindCSS"],
         "imageUrl": vividraftImage,
         "projectUrl": "",
-        "demoUrl": "https://vividraft.weilai.ai/zh"
+        "demoUrl": "https://vividraft.weilai.ai/zh",
+        "videos": [
+            {
+                "title": "viviDraft 演示",
+                "url": "https://blog-vi.oss-cn-shanghai.aliyuncs.com/A.mp4"
+            }
+        ]
     },
     {
         "title": "viaimNote",
@@ -137,6 +143,34 @@ export const projectsData = [
         tags: ["Electron", "Vue3", "Node.js", "LLM", "Whisper", "Ollama"],
         imageUrl: remeImage,
         demoUrl: 'https://reme.chat',
+        videos: [
+          {
+            title: "Reme 免费版本",
+            url: "https://blog-vi.oss-cn-shanghai.aliyuncs.com/reme/Reme.mp4", // Placeholder URL
+          },
+
+          {
+            title: "Reme 简历分析",
+            url: "https://blog-vi.oss-cn-shanghai.aliyuncs.com/reme%E6%BC%94%E7%A4%BA%E8%A7%86%E9%A2%91/%E9%A3%9E%E4%B9%A620260228-145850.mp4", // Placeholder URL
+          },
+          {
+            title: "Reme 面试结果分析",
+            url: "https://blog-vi.oss-cn-shanghai.aliyuncs.com/reme%E6%BC%94%E7%A4%BA%E8%A7%86%E9%A2%91/%E9%A3%9E%E4%B9%A620260228-145812.mp4" }
+          ,
+          {
+            title: "Reme 面试实时分析",
+            url: "https://blog-vi.oss-cn-shanghai.aliyuncs.com/reme%E6%BC%94%E7%A4%BA%E8%A7%86%E9%A2%91/%E9%A3%9E%E4%B9%A620260228-145809.mp4", // Placeholder URL
+          },
+          {
+            title: "Reme 多组件对比演示",
+            url: "https://blog-vi.oss-cn-shanghai.aliyuncs.com/reme%E6%BC%94%E7%A4%BA%E8%A7%86%E9%A2%91/%E9%A3%9E%E4%B9%A620260228-145749.mp4", // Placeholder URL
+          },
+          {
+            title: "Reme 早期版本演示",
+            url: "https://blog-vi.oss-cn-shanghai.aliyuncs.com/reme%E6%BC%94%E7%A4%BA%E8%A7%86%E9%A2%91/%E9%A3%9E%E4%B9%A620260228-150259.mp4", // Placeholder URL
+          },
+        
+        ]
     },
     {
         title: "LeChat Document Assistant",

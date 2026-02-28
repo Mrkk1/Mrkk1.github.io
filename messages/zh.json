@@ -12,6 +12,15 @@
         "projects": "我的项目",
         "skills": "我的技能"
     },
+    "ProjectSection": {
+        "code": "源码",
+        "live_demo": "在线地址",
+        "video": "视频演示",
+        "playlist": "播放列表",
+        "playlist_count": "{count} 个视频",
+        "video_not_available": "视频不可用",
+        "video_index": "视频"
+    },
     "AboutSection": {
         "desc": "uniai开源核心贡献者之一，node全栈开发工程师。曾在校网信中心、浦江县文旅局、中科智能计算研究院实习。曾在讯飞未来从事ai领域相关开发。目前在阿里巴巴，从事AI平台与Agent相关开发工作。有大量0到1到项目开发经验。"
     }

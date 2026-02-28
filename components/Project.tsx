@@ -4,12 +4,14 @@ import { useRef } from "react"
 import { projectsData } from "@/lib/data"
 import Image from "next/image"
 import { motion, useScroll, useTransform } from "framer-motion"
-import { FaGithubSquare } from "react-icons/fa"
+import { FaGithubSquare, FaVideo } from "react-icons/fa"
 import Link from "next/link"
 import { FiExternalLink } from "react-icons/fi"
-import { useLocale } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
-type ProjectProps = (typeof projectsData)[number]
+type ProjectProps = (typeof projectsData)[number] & {
+  onOpenVideo?: (videos: { title: string; url: string; thumbnail?: string }[]) => void
+}
 
 export default function Project({
   title,
@@ -20,6 +22,8 @@ export default function Project({
   imageUrl,
   projectUrl,
   demoUrl,
+  videos,
+  onOpenVideo,
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
@@ -29,6 +33,7 @@ export default function Project({
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1])
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1])
   const activeLocale = useLocale()
+  const t = useTranslations("ProjectSection")
 
   return (
     <motion.div
@@ -59,7 +64,7 @@ export default function Project({
                   target="_blank"
                   className="w-full flex items-center gap-1  hover:underline underline-offset-2"
                 >
-                  <span className="break-keep">Code</span>
+                  <span className="break-keep">{t("code")}</span>
 
                   <FaGithubSquare className="w-5 h-5" />
                 </Link>
@@ -70,9 +75,18 @@ export default function Project({
                   target="_blank"
                   className=" w-full flex items-center gap-1 hover:underline underline-offset-2"
                 >
-                  <span className="break-keep min-w-[4.5rem]">Live demo</span>
+                  <span className="break-keep min-w-[4.5rem]">{t("live_demo")}</span>
                   <FiExternalLink className="w-5 h-5 " />
                 </Link>
+              )}
+              {videos && (
+                <button
+                  onClick={() => onOpenVideo?.(videos)}
+                  className="w-full flex items-center gap-1 hover:underline underline-offset-2 text-pink dark:text-yellow cursor-pointer"
+                >
+                  <span className="break-keep min-w-[3rem]">{t("video")}</span>
+                  <FaVideo className="w-4 h-4" />
+                </button>
               )}
             </div>
           </div>

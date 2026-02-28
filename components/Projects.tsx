@@ -8,10 +8,19 @@ import Project from "./Project"
 import { useLocale } from "next-intl"
 import Link from "next/link"
 import { FaAngleRight } from "react-icons/fa6"
+import { useState } from "react"
+import VideoModal from "./VideoModal"
 
 export default function Projects() {
   const { ref } = useSectionInView("Projects", 0.1)
   const activeLocale = useLocale()
+  const [selectedVideos, setSelectedVideos] = useState<{ title: string; url: string; thumbnail?: string }[] | null>(null)
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false)
+
+  const handleOpenVideo = (videos: { title: string; url: string; thumbnail?: string }[]) => {
+    setSelectedVideos(videos)
+    setIsVideoModalOpen(true)
+  }
 
   return (
     <section ref={ref} id="projects" className="scroll-mt-28 mb-28">
@@ -24,7 +33,7 @@ export default function Projects() {
       <div>
         {projectsData.map((project, index) => (
           <React.Fragment key={index}>
-            <Project {...project} />
+            <Project {...project} onOpenVideo={handleOpenVideo} />
           </React.Fragment>
         ))}
       </div>
@@ -36,6 +45,12 @@ export default function Projects() {
         View All Projects
         <FaAngleRight className="group-hover:translate-x-2 transition" />
       </Link>
+
+      <VideoModal
+        isOpen={isVideoModalOpen}
+        onClose={() => setIsVideoModalOpen(false)}
+        videos={selectedVideos || []}
+      />
     </section>
   )
 }

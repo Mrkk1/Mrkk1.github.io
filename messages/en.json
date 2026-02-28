@@ -12,6 +12,15 @@
         "projects": "Projects",
         "skills": "Skills"
     },
+    "ProjectSection": {
+        "code": "Code",
+        "live_demo": "Live Demo",
+        "video": "Video",
+        "playlist": "Playlist",
+        "playlist_count": "{count} Videos",
+        "video_not_available": "Video not available",
+        "video_index": "Video"
+    },
     "AboutSection": {
         "desc": "I am a core contributor to the open-source project uniai and a Node.js full-stack developer. I have interned at the University Network Information Center, Pujiang County Bureau of Culture, Radio, Television, and Tourism, and the Suzhou Institute of Intelligent Computing Technology, CAS. I previously worked at iFLYTEK Future, focusing on AI-related development. I currently work at Alibaba, focusing on AI platforms and Agent development. I have extensive experience in developing projects from 0 to 1."
     }
